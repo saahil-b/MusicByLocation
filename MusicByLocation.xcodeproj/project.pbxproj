@@ -13,6 +13,7 @@
 		0752A3B8264DBC0D0003A2A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0752A3B7264DBC0D0003A2A3 /* Preview Assets.xcassets */; };
 		0752A3C3264DBC0E0003A2A3 /* MusicByLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A3C2264DBC0E0003A2A3 /* MusicByLocationTests.swift */; };
 		0752A3CE264DBC0E0003A2A3 /* MusicByLocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A3CD264DBC0E0003A2A3 /* MusicByLocationUITests.swift */; };
+		0752A3DF264DBD3A0003A2A3 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A3DE264DBD3A0003A2A3 /* LocationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		0752A3C9264DBC0E0003A2A3 /* MusicByLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicByLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0752A3CD264DBC0E0003A2A3 /* MusicByLocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicByLocationUITests.swift; sourceTree = "<group>"; };
 		0752A3CF264DBC0E0003A2A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0752A3DE264DBD3A0003A2A3 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				0752A3B4264DBC0D0003A2A3 /* Assets.xcassets */,
 				0752A3B9264DBC0D0003A2A3 /* Info.plist */,
 				0752A3B6264DBC0D0003A2A3 /* Preview Content */,
+				0752A3DE264DBD3A0003A2A3 /* LocationHandler.swift */,
 			);
 			path = MusicByLocation;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0752A3DF264DBD3A0003A2A3 /* LocationHandler.swift in Sources */,
 				0752A3B3264DBC090003A2A3 /* ContentView.swift in Sources */,
 				0752A3B1264DBC090003A2A3 /* MusicByLocationApp.swift in Sources */,
 			);
