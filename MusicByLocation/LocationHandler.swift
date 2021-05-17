@@ -8,12 +8,10 @@
 import Foundation
 import CoreLocation
 
-class LocationHandler: NSObject, CLLocationManagerDelegate, ObservableObject {
+class LocationHandler: NSObject, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     let geocoder = CLGeocoder()
-    @Published var lastKnownLocation: String = ""
-    
-    
+    weak var stateController: StateController?
     
     override init() {
         super.init()
@@ -30,22 +28,15 @@ class LocationHandler: NSObject, CLLocationManagerDelegate, ObservableObject {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        var country = ""
-        var city = ""
-        var town = ""
-        
+
         if let firstLocation = locations.first {
             geocoder.reverseGeocodeLocation(firstLocation, completionHandler: { (placemarks, error) in
                 if error != nil{
-                    self.lastKnownLocation = "Could not perform lookup of coordinate info"
+                    self.stateController?.lastKnownLocation = "Could not perform lookup of coordinate info"
                 } else {
                     if let firstPlaceMark = placemarks?[0] {
-                        country = firstPlaceMark.country ?? "Couldn't find country"
-                        city = firstPlaceMark.locality ?? "Couldn't find city"
-                        town = firstPlaceMark.subLocality ?? "Couldn't find town"
-                        
-                        self.lastKnownLocation = "\(town)\n\(city)\n\(country)"
+                        self.stateController?.lastKnownLocation = firstPlaceMark.getLocationBreakdown()
+                        self.stateController?.searchTerm = firstPlaceMark.locality ?? (firstPlaceMark.country ?? "Error")
                     }
                 }
             })
@@ -53,6 +44,6 @@ class LocationHandler: NSObject, CLLocationManagerDelegate, ObservableObject {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        lastKnownLocation = "Error finding location"
+        stateController?.lastKnownLocation = "Error finding location"
     }
 }
