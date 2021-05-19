@@ -19,6 +19,7 @@
 		0752A3C3264DBC0E0003A2A3 /* MusicByLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A3C2264DBC0E0003A2A3 /* MusicByLocationTests.swift */; };
 		0752A3CE264DBC0E0003A2A3 /* MusicByLocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A3CD264DBC0E0003A2A3 /* MusicByLocationUITests.swift */; };
 		0752A3DF264DBD3A0003A2A3 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752A3DE264DBD3A0003A2A3 /* LocationHandler.swift */; };
+		07725E5C26559594000A4B0D /* ITunesAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07725E5B26559594000A4B0D /* ITunesAdaptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0752A3CD264DBC0E0003A2A3 /* MusicByLocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicByLocationUITests.swift; sourceTree = "<group>"; };
 		0752A3CF264DBC0E0003A2A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0752A3DE264DBD3A0003A2A3 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		07725E5B26559594000A4B0D /* ITunesAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAdaptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				0752A3B6264DBC0D0003A2A3 /* Preview Content */,
 				0752A3DE264DBD3A0003A2A3 /* LocationHandler.swift */,
 				070D89212652D8CE0035D11B /* StateController.swift */,
+				07725E5B26559594000A4B0D /* ITunesAdaptor.swift */,
 			);
 			path = MusicByLocation;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				0752A3B1264DBC090003A2A3 /* MusicByLocationApp.swift in Sources */,
 				070D891A2652D7BF0035D11B /* CLPlacemark.swift in Sources */,
 				070D89222652D8CE0035D11B /* StateController.swift in Sources */,
+				07725E5C26559594000A4B0D /* ITunesAdaptor.swift in Sources */,
 				070D89282652DD920035D11B /* ArtistResponse.swift in Sources */,
 				070D89352652E25F0035D11B /* String.swift in Sources */,
 				070D89302652DDBE0035D11B /* Artist.swift in Sources */,
